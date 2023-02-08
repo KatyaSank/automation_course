@@ -1,0 +1,1 @@
+git clone https://github.com/KatyaSank/automation_course.git
