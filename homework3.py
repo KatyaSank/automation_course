@@ -1,11 +1,11 @@
 # Домашнее задание
 
-int1 = 1.6
-int2 = 2.99
-int_round1 = round(int1)
-int_round2 = round(int2)
-print(int_round1)
-print(int_round2)
+flt1 = 1.6
+flt2 = 2.99
+int_1 = int(flt1)
+int_2 = int(flt2)
+print(int_1)
+print(int_2)
 
 str = 'www.my_site.com#about'
 print(str.replace('#', '/'))
@@ -14,7 +14,8 @@ word = 'stroka'
 print(word + 'ing')
 
 stroka = 'Ivanou Ivan'
-print(stroka[7:11] + ' ' + stroka[0:6])
+new = stroka.rsplit(' ')
+print(new[1] + ' ' + new[0])
 
 animal = ' cat '
 print(animal.lstrip().rstrip())
@@ -23,7 +24,7 @@ school = {'1a': 20, '2b': 19, '3f': 25, '4t': 21, '5v': 22, '6j': 22, '7k': 18, 
 print(type(school))
 
 lst = [1, 2, 3, 9]
-print(lst[1])
+print(lst.pop(1))
 
 str1 = 'employ'
 str2 = 'employment'
