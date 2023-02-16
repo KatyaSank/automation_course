@@ -4,9 +4,9 @@ int = 7
 flt = 3.14
 str = "Dog"
 lst = [1, 5, 8]
-dic = {'one': 1, 'two': 2}
-tup = ('my', 'name', 'is')
-st = {'cat', 'cow', 'duck'}
+dic = {"one": 1, "two": 2}
+tup = ("my", "name", "is")
+st = {"cat", "cow", "duck"}
 bln = True
 emp = None
 
@@ -19,4 +19,3 @@ print(type(tup))
 print(type(st))
 print(type(bln))
 print(type(emp))
-
