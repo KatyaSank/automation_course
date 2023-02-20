@@ -22,32 +22,23 @@ print(n)
 # 3. Найти произведение положительных, сумму и количество отрицательных
 # из 10 введенных целых значений.
 
-n1 = 5
-n2 = 6
-n3 = -7
-n4 = -5
-n5 = 4
-n6 = 0
-n7 = 4
-n8 = 2
-n9 = -3
-n10 = 1
+from random import randint
 
+numbers = [randint(-100, 100) for _ in range(10)]
 m1 = 1
 m2 = 0
 m3 = 0
 
-for x in n1, n2, n3, n4, n5, n6, n7, n8, n9, n10:
-    if x > 0:
-        m1 *= x
-print(m1)
-
-for z in n1, n2, n3, n4, n5, n6, n7, n8, n9, n10:
-    if z < 0:
-        m2 += z
+for n in numbers:
+    if n > 0:
+        m1 *= n
+    elif n < 0:
+        m2 += n
         m3 += 1
-print(m2)
-print(m3)
+
+print('Произведение положительных - ' + str(m1))
+print('Сумма отрицательных - ' + str(m2))
+print('Количество отрицательных - ' + str(m3))
 
 # 4. Дан словарь пловцов с их результатами. Напечатать лучший результат
 # заплыва среди 6 участников.
@@ -75,18 +66,12 @@ print(min(slv.values()))
 # уникальное число
 
 
-def un(mas, n):
-    for i in range(n):
-        a = 0
-        while a < n:
-            if i != a and mas[i] == mas[a]:
-                break
-            a += 1
-        if a == n:
-            return mas[i]
-    return -1
+def unical(mas):
+    for i in mas:
+        a = mas.count(i)
+        if a == 1:
+            return i
 
 
 mas = [1, 5, 2, 9, 2, 9, 1]
-n = len(mas)
-print(un(mas, n))
+print(unical(mas))

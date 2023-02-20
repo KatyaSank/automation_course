@@ -21,7 +21,7 @@ str3_1 = str3.replace(",", "")
 str1 = "Minsk"
 str2 = "Belarus"
 
-print("Привет," + str3_1 + "! Добро пожаловать в " + str1 + " " + str2)
+print(f"Привет,{str3}!", f"Добро пожаловать в {str1} {str2}")
 
 # 3. Дан список ["I", "love", "arrays", "they", "are", "my", "favorite"] сделайте из него
 # строку => "I love arrays they are my favorite"
