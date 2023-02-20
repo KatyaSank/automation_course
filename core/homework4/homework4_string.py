@@ -2,12 +2,10 @@
 # Извлеките из строки первый символ, затем последний, третий с начала и третий с
 # конца. Измерьте длину вашей строки.
 
-str = "KatyaSank"
-print(str[0])
-print(str[-1])
-print(str[2])
-print(str[-3])
-print(len(str))
+
+def symbols(str):
+    return str[0], str[-1], str[2], str[-3], len(str)
+
 
 # 2. Присвойте произвольную строку длиной 10-15 символов переменной и извлеките из
 # нее следующие срезы:
@@ -16,18 +14,21 @@ print(len(str))
 # ● символы с индексами кратными трем
 # ● переверните строку
 
-str1 = "HelloWorld!!"
-print(str1[0:8])
-print(str1[4:8])
-print(str1[3:12:3])
-reversed = "".join(reversed(str1))
-print(reversed)
+
+def srez(str1):
+    reverse = "".join(reversed(str1))
+    return reverse, str1[0:8], str1[4:8], str1[3:12:3]
+
 
 # 3. Есть строка: “my name is name”. Напечатайте ее, но вместо 2ого “name” вставьте
 # ваше имя.
 
-str3 = "my name is name"
-print(str3[:11] + "Katya")
+
+def imya():
+    str3 = "my name is name"
+    result = str3[:11] + "Katya"
+    return result
+
 
 # 4. Есть строка: test_tring = "Hello world!", необходимо
 # ● напечатать на каком месте находится буква w
@@ -35,8 +36,11 @@ print(str3[:11] + "Katya")
 # ● Проверить начинается ли строка с подстроки: “Hello”
 # ● Проверить заканчивается ли строка подстрокой: “qwe”
 
-test_tring = "Hello world!"
-print(test_tring.find("w"))
-print(test_tring.count("l"))
-print(test_tring.startswith("Hello"))
-print(test_tring.endswith("qwe"))
+
+def letters():
+    test_tring = "Hello world!"
+    a = test_tring.find("w")
+    b = test_tring.count("l")
+    c = test_tring.startswith("Hello")
+    d = test_tring.endswith("qwe")
+    return a, b, c, d

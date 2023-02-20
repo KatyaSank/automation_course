@@ -6,24 +6,29 @@
 # строкового типа.
 
 
-x = 5
-y = 8
-print(x < 23**2 and y + 1 > 2)
-print(x > 7 and (y - 4) < 6)
-print(x == y and (y + 10) * 4 > 5)
-print(y**3 > x and y / 3 != 4)
+def operator_i():
+    x = 5
+    y = 8
+    return (
+        x < 23**2 and y + 1 > 2,
+        x > 7 and (y - 4) < 6,
+        x == y and (y + 10) * 4 > 5,
+        y**3 > x and y / 3 != 4,
+    )
 
-print(x + y < 0 or x**4 + 55 == 0)
-print(x < 55 or 0 > 1)
-print(x * y == 0 or "5" == True)
-print(x * 23 > y - 7 or (5**2) * x < 10)
 
-a = "Katya"
-b = "Python"
-print(len(a) < len(b))
+def operator_ili():
+    x = 5
+    y = 8
+    return (
+        x + y < 0 or x**4 + 55 == 0,
+        x < 55 or 0 > 1,
+        x * y == 0 or "5" == True,
+        x * 23 > y - 7 or (5**2) * x < 1,
+    )
 
-a = 5
-b = 2
-print("a == b =", a == b)
-print("a != b =", a != b)
-print("a > b =", a > b)
+
+def slova_boolen():
+    a = 5
+    b = 2
+    return "a == b =", a == b, "a != b =", a != b, "a > b =", a > b
