@@ -1,9 +1,10 @@
 from homework3 import *
 from homework4 import *
 
+
 # hm3
-print(c(1.6))
-print(c(2.99))
+print(convert_to_celoe(1.6))
+print(convert_to_celoe(2.99))
 
 print(zamena("www.my_site.com#about"))
 
@@ -22,14 +23,16 @@ print(vhod("employ", "employment"))
 print(vihod("My name is Agent Smith"))
 
 # hm4_boolen
-print(operator_i())
+print(operator_i(5, 8))
 
-print(operator_ili())
+print(operator_ili(5, 8))
 
-print(slova_boolen())
+print(slova_boolen(5, 2))
 
 # hm4_change
-print(stroka_v_mas())
+a = "Robin Singh"
+b = "I love arrays they are my favorite"
+print(stroka_v_mas(a, b))
 
 print(formatir_strok())
 
@@ -94,9 +97,12 @@ print(symbols(str))
 str1 = "HelloWorld!!"
 print(srez(str1))
 
-print(imya())
+str3 = "my name is name"
+my_name = "Katya"
+print(imya(my_name, str3))
 
-print(letters())
+test_tring = "Hello world!"
+print(letters(test_tring))
 
 # hm4_variable
 print(variab())
@@ -104,7 +110,7 @@ print(variab())
 # hm4_while
 print(proiz(4))
 
-print(flowers())
+print(flowers(2, 5))
 
 print(num(45))
 

@@ -4,9 +4,7 @@
 # "I love arrays they are my favorite" => ["I", "love", "arrays", "they", "are", "my", "favorite"]
 
 
-def stroka_v_mas():
-    a = "Robin Singh"
-    b = "I love arrays they are my favorite"
+def stroka_v_mas(a, b):
     new_a = a.split()
     new_b = b.split()
     return new_a, new_b
@@ -58,7 +56,6 @@ def redaktir_spisok():
 
 a = {"a": 1, "b": 2, "c": 3}
 b = {"c": 3, "d": 4, "e": 5}
-
 
 # *1) Вам передан массив чисел. Известно, что каждое число в этом массиве имеет пару,
 # кроме одного: [1, 5, 2, 9, 2, 9, 1] => 5

@@ -24,9 +24,8 @@ def srez(str1):
 # ваше имя.
 
 
-def imya():
-    str3 = "my name is name"
-    result = str3[:11] + "Katya"
+def imya(my_name, str3):
+    result = str3[:11] + my_name
     return result
 
 
@@ -37,10 +36,10 @@ def imya():
 # ● Проверить заканчивается ли строка подстрокой: “qwe”
 
 
-def letters():
-    test_tring = "Hello world!"
-    a = test_tring.find("w")
-    b = test_tring.count("l")
-    c = test_tring.startswith("Hello")
-    d = test_tring.endswith("qwe")
-    return a, b, c, d
+def letters(test_tring):
+    return (
+        test_tring.find("w"),
+        test_tring.count("l"),
+        test_tring.startswith("Hello"),
+        test_tring.endswith("qwe"),
+    )

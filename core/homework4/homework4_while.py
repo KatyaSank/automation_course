@@ -16,9 +16,7 @@ def proiz(N):
 # составлять меньше 10% от площади вторых сортов.
 
 
-def flowers():
-    S1 = 1
-    S2 = 5
+def flowers(S1, S2):
     x = 0
     while S1 > 0.1 * S2:
         S1 *= 2

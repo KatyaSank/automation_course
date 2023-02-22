@@ -6,29 +6,23 @@
 # строкового типа.
 
 
-def operator_i():
-    x = 5
-    y = 8
+def operator_i(x, y):
     return (
-        x < 23**2 and y + 1 > 2,
+        x < 23 ** 2 and y + 1 > 2,
         x > 7 and (y - 4) < 6,
         x == y and (y + 10) * 4 > 5,
-        y**3 > x and y / 3 != 4,
+        y ** 3 > x and y / 3 != 4,
     )
 
 
-def operator_ili():
-    x = 5
-    y = 8
+def operator_ili(x, y):
     return (
-        x + y < 0 or x**4 + 55 == 0,
+        x + y < 0 or x ** 4 + 55 == 0,
         x < 55 or 0 > 1,
         x * y == 0 or "5" == True,
-        x * 23 > y - 7 or (5**2) * x < 1,
+        x * 23 > y - 7 or (5 ** 2) * x < 1,
     )
 
 
-def slova_boolen():
-    a = 5
-    b = 2
+def slova_boolen(a, b):
     return "a == b =", a == b, "a != b =", a != b, "a > b =", a > b

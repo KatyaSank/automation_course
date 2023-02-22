@@ -2,7 +2,7 @@
 # Привести к целому типу -1.6, 2.99
 
 
-def c(x):
+def convert_to_celoe(x):
     return int(x)
 
 

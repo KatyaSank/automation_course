@@ -27,8 +27,7 @@ def listss(lst1, lst2):
 
 
 def common(a, b):
-    c = list(set(a) & set(b))
-    return c
+    return list(set(a) & set(b))
 
 
 # 8. Есть список: [1, 2, 3, 4, 3, 2, 5, 1, 4, 6, 7, 1, 8, 2, 3] оставить в нем только уникальные
@@ -36,5 +35,4 @@ def common(a, b):
 
 
 def unic(lst):
-    a = set(lst)
-    return a
+    return set(lst)
