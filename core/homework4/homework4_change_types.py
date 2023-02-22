@@ -14,12 +14,9 @@ def stroka_v_mas(a, b):
 # Напечатайте текст: “Привет, Ivan Ivanou! Добро пожаловать в Minsk Belarus”
 
 
-def formatir_strok():
-    lst1 = ["Ivan", "Ivanou"]
+def formatir_strok(lst1, str1, str2):
     str3 = " ".join(lst1)
     str3_1 = str3.replace(",", "")
-    str1 = "Minsk"
-    str2 = "Belarus"
     return f"Привет,{str3}! Добро пожаловать в {str1} {str2}"
 
 
@@ -27,8 +24,7 @@ def formatir_strok():
 # строку => "I love arrays they are my favorite"
 
 
-def spisok_v_stroki():
-    lst = ["I", "love", "arrays", "they", "are", "my", "favorite"]
+def spisok_v_stroki(lst):
     str = " ".join(lst)
     str1 = str.replace(",", "")
     return str1
@@ -38,8 +34,7 @@ def spisok_v_stroki():
 # удалите элемент из списка под индексом 6
 
 
-def redaktir_spisok():
-    spis = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+def redaktir_spisok(spis):
     spis.insert(2, "cat")
     spis.pop(6)
     return spis

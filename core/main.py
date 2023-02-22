@@ -1,7 +1,6 @@
 from homework3 import *
 from homework4 import *
 
-
 # hm3
 print(convert_to_celoe(1.6))
 print(convert_to_celoe(2.99))
@@ -34,14 +33,19 @@ a = "Robin Singh"
 b = "I love arrays they are my favorite"
 print(stroka_v_mas(a, b))
 
-print(formatir_strok())
+lst1 = ["Ivan", "Ivanou"]
+str1 = "Minsk"
+str2 = "Belarus"
+print(formatir_strok(lst1, str1, str2))
 
-print(spisok_v_stroki())
+lst = ["I", "love", "arrays", "they", "are", "my", "favorite"]
+print(spisok_v_stroki(lst))
 
-print(redaktir_spisok())
+spis = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(redaktir_spisok(spis))
 
 # hm4_condition
-print(positivnoe_chislo(-2))
+print(positivnoe_chislo(3))
 
 print(positive(4, 6, 8))
 
@@ -71,9 +75,18 @@ print(celye_chisla(0, 8))
 
 print(natur_chisla(1, 10))
 
-print(proizvedenie())
+numbers = [randint(-100, 100) for _ in range(10)]
+print(proizvedenie(numbers))
 
-print(winner(slv))
+slv = {
+    "Бекиш Александр": 21.07,
+    "Будник Алексей": 20.34,
+    "Гребень Анастасия": 22.12,
+    "Давидович Татьяна": 30,
+    "Дешук Дмитрий": 24.01,
+    "Казак Анна": 28.17,
+}
+print(winner(**slv))
 
 mas = [1, 5, 2, 9, 2, 9, 1]
 print(unical(mas))

@@ -6,9 +6,7 @@
 def positivnoe_chislo(per):
     if per > 0:
         per += 1
-        return per
-    else:
-        return per
+    return per
 
 
 # 2. Даны три целых числа. Найти количество положительных чисел в исходном
@@ -17,8 +15,7 @@ def positivnoe_chislo(per):
 
 def positive(a, b, c):
     n = 0
-    lst = [a, b, c]
-    for x in lst:
+    for x in [a, b, c]:
         if x > 0:
             n += 1
     return n
