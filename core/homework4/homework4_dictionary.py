@@ -8,27 +8,12 @@
 # ◦ в школе расформировали один из классов.
 # 4. Выведите содержимое словаря на экран.
 
-school = {
-    "1a": 20,
-    "2b": 19,
-    "3f": 25,
-    "4t": 21,
-    "5v": 22,
-    "6j": 22,
-    "7k": 18,
-    "8c": 21,
-    "9n": 23,
-    "10s": 25,
-}
-print(school.get("6j"))
-upd = {"5v": 40, "8c": 45, "10s": 50}
-upd1 = {"11y": 17, "12l": 19}
 
-school.update(upd)
-print(school)
-
-school.update(upd1)
-print(school)
-
-school.pop("1a")
-print(school)
+def sch(school):
+    upd = {"5v": 40, "8c": 45, "10s": 50}
+    upd1 = {"11y": 17, "12l": 19}
+    school.update(upd)
+    school.update(upd1)
+    rem_class: dict = school.pop("1a")
+    num_of_people = school.get("6j")
+    return rem_class, num_of_people, school

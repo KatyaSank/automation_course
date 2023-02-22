@@ -1,44 +1,44 @@
 from random import randint
 
+
 # 1. Даны два целых числа A и B (A < B). Найти сумму всех целых чисел от A до B
 # включительно.
-A = 0
-B = 3
-n = 0
 
-for x in range(A, B + 1):
-    n += x
-print(n)
+
+def celye_chisla(A, B):
+    n = 0
+    for x in range(A, B + 1):
+        n += x
+    return n
+
 
 # 2. Найти сумму всех натуральных чисел в от A до B
 
-A = 1
-B = 5
-n = 0
 
-for x in range(A + 1, B):
-    if x > 0:
-        n += x
-print(n)
+def natur_chisla(A, B):
+    n = 0
+    for x in range(A + 1, B):
+        if x > 0:
+            n += x
+    return n
+
 
 # 3. Найти произведение положительных, сумму и количество отрицательных
 # из 10 введенных целых значений.
 
-numbers = [randint(-100, 100) for _ in range(10)]
-m1 = 1
-m2 = 0
-m3 = 0
 
-for n in numbers:
-    if n > 0:
-        m1 *= n
-    elif n < 0:
-        m2 += n
-        m3 += 1
+def proizvedenie(numbers):
+    m1 = 1
+    m2 = 0
+    m3 = 0
+    for n in numbers:
+        if n > 0:
+            m1 *= n
+        elif n < 0:
+            m2 += n
+            m3 += 1
+        return m1, m2, m3
 
-print("Произведение положительных - " + str(m1))
-print("Сумма отрицательных - " + str(m2))
-print("Количество отрицательных - " + str(m3))
 
 # 4. Дан словарь пловцов с их результатами. Напечатать лучший результат
 # заплыва среди 6 участников.
@@ -49,16 +49,9 @@ print("Количество отрицательных - " + str(m3))
 # Дешук Дмитрий - 24.01
 # Казак Анна - 28,17
 
-slv = {
-    "Бекиш Александр": 21.07,
-    "Будник Алексей": 20.34,
-    "Гребень Анастасия": 22.12,
-    "Давидович Татьяна": 30,
-    "Дешук Дмитрий": 24.01,
-    "Казак Анна": 28.17,
-}
 
-print(min(slv.values()))
+def winner(**slv):
+    return min(slv.values())
 
 
 # 5. Есть массив чисел. Известно, что каждое число в этом массиве имеет пару,
@@ -71,7 +64,3 @@ def unical(mas):
         a = mas.count(i)
         if a == 1:
             return i
-
-
-mas = [1, 5, 2, 9, 2, 9, 1]
-print(unical(mas))

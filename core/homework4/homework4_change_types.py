@@ -4,40 +4,41 @@
 # "I love arrays they are my favorite" => ["I", "love", "arrays", "they", "are", "my", "favorite"]
 
 
-a = "Robin Singh"
-new_a = a.split()
-print(new_a)
+def stroka_v_mas(a, b):
+    new_a = a.split()
+    new_b = b.split()
+    return new_a, new_b
 
-b = "I love arrays they are my favorite"
-new_b = b.split()
-print(new_b)
 
 # 2. Дан список: [‘Ivan’, ‘Ivanou’], и 2 строки: Minsk, Belarus
 # Напечатайте текст: “Привет, Ivan Ivanou! Добро пожаловать в Minsk Belarus”
 
-lst1 = ["Ivan", "Ivanou"]
-str3 = " ".join(lst1)
-str3_1 = str3.replace(",", "")
-str1 = "Minsk"
-str2 = "Belarus"
 
-print(f"Привет,{str3}!", f"Добро пожаловать в {str1} {str2}")
+def formatir_strok(lst1, str1, str2):
+    str3 = " ".join(lst1)
+    str3_1 = str3.replace(",", "")
+    return f"Привет,{str3}! Добро пожаловать в {str1} {str2}"
+
 
 # 3. Дан список ["I", "love", "arrays", "they", "are", "my", "favorite"] сделайте из него
 # строку => "I love arrays they are my favorite"
 
-lst = ["I", "love", "arrays", "they", "are", "my", "favorite"]
-str = " ".join(lst)
-str1 = str.replace(",", "")
-print(str1)
+
+def spisok_v_stroki(lst):
+    str = " ".join(lst)
+    str1 = str.replace(",", "")
+    return str1
+
 
 # 4. Создайте список из 10 элементов, вставьте на 3-ю позицию новое значение,
 # удалите элемент из списка под индексом 6
 
-spis = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-spis.insert(2, "cat")
-spis.pop(6)
-print(spis)
+
+def redaktir_spisok(spis):
+    spis.insert(2, "cat")
+    spis.pop(6)
+    return spis
+
 
 # 5.
 # Есть 2 словаря
@@ -50,7 +51,6 @@ print(spis)
 
 a = {"a": 1, "b": 2, "c": 3}
 b = {"c": 3, "d": 4, "e": 5}
-
 
 # *1) Вам передан массив чисел. Известно, что каждое число в этом массиве имеет пару,
 # кроме одного: [1, 5, 2, 9, 2, 9, 1] => 5

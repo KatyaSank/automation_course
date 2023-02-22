@@ -9,20 +9,14 @@
 # нового значения используйте операции конкатенации (+) и повторения строки (*).
 # 6. Выведите значения всех переменных.
 
-var_int = 10
-var_float = 8.4
-var_str = "No"
 
-big_int = var_int * 3.5
-
-big_int = var_float - 1
-
-print(var_int / var_float)
-print(big_int / var_float)
-
-var_str = (var_str) * 2 + ("Yes") * 3
-
-print(var_int)
-print(var_float)
-print(var_str)
-print(big_int)
+def variab():
+    var_int = 10
+    var_float = 8.4
+    var_str = "No"
+    big_int = var_int * 3.5
+    big_int = var_float - 1
+    a = var_int / var_float
+    b = big_int / var_float
+    var_str = (var_str) * 2 + ("Yes") * 3
+    return a, b, var_int, var_float, var_str, big_int

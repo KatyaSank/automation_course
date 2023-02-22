@@ -8,21 +8,15 @@
 # значение этой переменной.
 # 6. Добавьте в список два новых элемента и снова выведите его.
 
-lst1 = [1, 2, 3]
-lst2 = ["cat", "dog", "parrot"]
-print(lst1[1])
 
-lst2[2] = "cow"
-print(lst2)
-
-com_lst = lst1 + lst2
-print(com_lst)
-com_lst1 = com_lst[1:5]
-print(com_lst1)
-
-com_lst.append(999)
-com_lst.append("tiger")
-print(com_lst)
+def listss(lst1, lst2):
+    first = lst1[1]
+    lst2[2] = "cow"
+    com_lst: list = lst1 + lst2
+    com_lst1 = com_lst[1:5]
+    a: list = [999, "tiger"]
+    com_lst2 = com_lst + a
+    return first, lst2, com_lst, com_lst1, com_lst2
 
 
 # 7. Даны списки:
@@ -31,15 +25,14 @@ print(com_lst)
 # Нужно вернуть список, который состоит из элементов, общих для этих двух
 # списков. -- !не использовать циклы
 
-a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
-b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 
-c = list(set(a) & set(b))
-print(c)
+def common(a, b):
+    return list(set(a) & set(b))
+
 
 # 8. Есть список: [1, 2, 3, 4, 3, 2, 5, 1, 4, 6, 7, 1, 8, 2, 3] оставить в нем только уникальные
 # значения. !не использовать циклы
 
-lst = [1, 2, 3, 4, 3, 2, 5, 1, 4, 6, 7, 1, 8, 2, 3]
-a = set(lst)
-print(a)
+
+def unic(lst):
+    return set(lst)
