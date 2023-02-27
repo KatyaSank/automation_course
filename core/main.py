@@ -1,6 +1,10 @@
 from homework3 import *
 from homework4 import *
+from homework8 import *
 
+print(
+    "hm3____________________________________________________________________________________________________________"
+)
 
 # hm3
 print(convert_to_celoe(1.6))
@@ -22,14 +26,18 @@ print(vhod("employ", "employment"))
 
 print(vihod("My name is Agent Smith"))
 
-# hm4_boolen
+print(
+    "hm4_boolen_____________________________________________________________________________________________________"
+)
 print(operator_i(5, 8))
 
 print(operator_ili(5, 8))
 
 print(slova_boolen(5, 2))
 
-# hm4_change
+print(
+    "hm4_change_____________________________________________________________________________________________________"
+)
 a = "Robin Singh"
 b = "I love arrays they are my favorite"
 print(stroka_v_mas(a, b))
@@ -45,7 +53,9 @@ print(spisok_v_stroki(lst))
 spis = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 print(redaktir_spisok(spis))
 
-# hm4_condition
+print(
+    "hm4_condition__________________________________________________________________________________________________"
+)
 print(positivnoe_chislo(3))
 
 print(positive(4, 6, 8))
@@ -56,7 +66,9 @@ print(day_of_week(7))
 
 print(ves(100, 1))
 
-# hm4_dict
+print(
+    "hm4_dict_______________________________________________________________________________________________________"
+)
 school = {
     "1a": 20,
     "2b": 19,
@@ -71,7 +83,9 @@ school = {
 }
 print(sch(school))
 
-# hm4_for
+print(
+    "hm4_for________________________________________________________________________________________________________"
+)
 print(celye_chisla(0, 8))
 
 print(natur_chisla(1, 10))
@@ -92,7 +106,9 @@ print(winner(**slv))
 mas = [1, 5, 2, 9, 2, 9, 1]
 print(unical(mas))
 
-# hm4_list
+print(
+    "hm4_list_______________________________________________________________________________________________________"
+)
 lst1 = [1, 2, 3]
 lst2 = ["cat", "dog", "parrot"]
 print(listss(lst1, lst2))
@@ -104,7 +120,9 @@ print(common(a, b))
 lst = [1, 2, 3, 4, 3, 2, 5, 1, 4, 6, 7, 1, 8, 2, 3]
 print(unic(lst))
 
-# hm4_string
+print(
+    "hm4_string_____________________________________________________________________________________________________"
+)
 str = "KatyaSank"
 print(symbols(str))
 
@@ -118,10 +136,14 @@ print(imya(my_name, str3))
 test_tring = "Hello world!"
 print(letters(test_tring))
 
-# hm4_variable
+print(
+    "hm4_variable___________________________________________________________________________________________________"
+)
 print(variab())
 
-# hm4_while
+print(
+    "hm4_while______________________________________________________________________________________________________"
+)
 print(proiz(4))
 
 print(flowers(2, 5))
@@ -129,3 +151,46 @@ print(flowers(2, 5))
 print(num(45))
 
 print(family(40, 5))
+
+print(
+    "hm8____________________________________________________________________________________________________________"
+)
+print(usual_fun(7))
+
+for m1 in gen(7):
+    print(m1)
+
+print(recur(7))
+
+print(add_two_symbols("3", 5))  # -> "35"
+print(add_two_symbols(5, 5))  # -> "55"
+print(add_two_symbols("a", "b"))  # -> 'ab’
+
+print(add_three_symbols(5, 6, 7))  # -> 18
+print(add_three_symbols("3", 5, 0))  # -> 8
+print(add_three_symbols(0.1, 0.2, 0.4))  # -> 0.7000000000000001
+
+number_names = {
+    0: "zero",
+    1: "one",
+    2: "two",
+    3: "three",
+    4: "four",
+    5: "five",
+    6: "six",
+    7: "seven",
+    8: "eight",
+    9: "nine",
+    10: "ten",
+    11: "eleven",
+    12: "twelve",
+    13: "thirteen",
+    14: "fourteen",
+    15: "fifteen",
+    16: "sixteen",
+    17: "seventeen",
+    18: "eighteen",
+    19: "nineteen",
+}
+
+print(len_of_num(number_names))
