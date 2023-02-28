@@ -1,6 +1,7 @@
 from homework3 import *
 from homework4 import *
 from homework8 import *
+from homework9 import *
 
 print(
     "hm3____________________________________________________________________________________________________________"
@@ -194,3 +195,20 @@ number_names = {
 }
 
 print(len_of_num(number_names))
+
+print(
+    "hm9____________________________________________________________________________________________________________"
+)
+
+# Наследование
+loki = Dog('Loki', '3 years', 'male')
+print(loki.run())
+print(loki.breath())
+
+# Полиморфизм
+orange = Cat('Orange', '1 year', 'male')
+print(orange.voice())
+print(loki.voice())
+
+# Инкапсуляция
+print(loki.jump())
