@@ -2,6 +2,7 @@ from homework3 import *
 from homework4 import *
 from homework8 import *
 from homework9 import *
+from homework10 import *
 
 print(
     "hm3____________________________________________________________________________________________________________"
@@ -201,14 +202,28 @@ print(
 )
 
 # Наследование
-loki = Dog('Loki', '3 years', 'male')
+loki = Dog("Loki", "3 years", "male")
 print(loki.run())
 print(loki.breath())
 
 # Полиморфизм
-orange = Cat('Orange', '1 year', 'male')
+orange = Cat("Orange", "1 year", "male")
 print(orange.voice())
 print(loki.voice())
 
 # Инкапсуляция
-print(loki.jump())
+# print(loki.jump())
+
+print(
+    "hm10____________________________________________________________________________________________________________"
+)
+
+tulip = Tulip(8, 10, 'Tulip')
+orchid = Orchid(7, 2, 'Orchid')
+magnolia = Magnolia(12, 10, 'Magnolia')
+
+my_buket = Buket([tulip, tulip, orchid, magnolia])
+print(my_buket.cost_of_buket())
+print(my_buket.lifecycle())
+my_buket.sorting_by_cost()
+my_buket.including_flowers()
