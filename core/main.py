@@ -218,7 +218,12 @@ print(
     "hm10____________________________________________________________________________________________________________"
 )
 
-my_buket.create_buket()
+tulip = Tulip(8, 10, 'Tulip')
+orchid = Orchid(7, 2, 'Orchid')
+magnolia = Magnolia(12, 10, 'Magnolia')
+
+my_buket = Buket([tulip, tulip, orchid, magnolia])
+print(my_buket.cost_of_buket())
 print(my_buket.lifecycle())
-print(my_buket.sorting_by_cost())
+my_buket.sorting_by_cost()
 my_buket.including_flowers()

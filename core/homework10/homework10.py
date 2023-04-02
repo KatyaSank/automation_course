@@ -1,110 +1,56 @@
-from dataclasses import dataclass
-
-
 # Цветочница.
 # Определить иерархию и создать несколько цветов. Собрать букет с использованием аксессуаров с определением его стоимости.
 # Определить время его увядания по среднему времени жизни всех цветов в букете.
 # Позволить сортировку цветов стоимости
 # Узнать, есть ли цветок в букете.
 
-
 class Flower:
-    def __init__(self, cost, time):
+    def __init__(self, cost, time, name):
         self.cost = cost
         self.time = time
+        self.name = name
 
 
-@dataclass
 class Tulip(Flower):
-    name: str = "Tulip"
-    cost: int = 8
-    time: int = 10
+    def __init__(self, cost, time, name, red=None):
+        super().__init__(cost, time, name)
+        self.color = red
 
 
-@dataclass
 class Orchid(Flower):
-    name: str = "Orchid"
-    cost: int = 7
-    time: int = 2
+    def __init__(self, cost, time, name, vanda=None):
+        super().__init__(cost, time, name)
+        self.subspecies = vanda
 
 
-@dataclass
 class Magnolia(Flower):
-    name: str = "Magnolia"
-    cost: int = 12
-    time: int = 10
+    def __init__(self, cost, time, name):
+        super().__init__(cost, time, name)
+        self.high = 20
 
 
 class Buket:
-    @staticmethod
-    def create_buket():
-        global a
-        a = list()
-        a.append(tulip.name)
-        a.append(orchid.name)
-        a.append(orchid.name)
-        a.append(magnolia.name)
-        print("My buket consists of - " + str(a))
+    def __init__(self, list_of_flowers):
+        self.list_of_flowers = list_of_flowers
+        self.cost = 0
+        self.time_of_living = 0
+        self.sorting = 0
 
-        def cost_of_buket():
-            cost = 0
-            for x in a:
-                if x == tulip.name:
-                    cost += tulip.cost
-                if x == orchid.name:
-                    cost += orchid.cost
-                if x == magnolia.name:
-                    cost += magnolia.cost
-            print("Cost of buket is " + str(cost))
+    def cost_of_buket(self):
+        for flower in self.list_of_flowers:
+            self.cost += flower.cost
+        return f'Cost of the buket is {self.cost}.'
 
-        cost_of_buket()
+    def lifecycle(self):
+        for flower in self.list_of_flowers:
+            self.time_of_living += flower.time
+        return f'Average fade time is  {self.time_of_living / len(self.list_of_flowers)}.'
 
-    @staticmethod
-    def lifecycle():
-        total_time = 0
-        for y in a:
-            if y == tulip.name:
-                total_time += tulip.time
-            if y == orchid.name:
-                total_time += orchid.time
-            if y == magnolia.name:
-                total_time += magnolia.time
-        b = len(a)
-        result = total_time / b
-        return "Lifecycle of the buket is " + str(result)
+    def sorting_by_cost(self):
+        self.sorting = sorted(self.list_of_flowers, key=lambda x: x.cost)
+        for flower in self.sorting:
+            print(flower.name)
 
-    @staticmethod
-    def sorting_by_cost():
-        b = []
-        for z in a:
-            if z == tulip.name:
-                b.append(tulip.cost)
-            if z == orchid.name:
-                b.append(orchid.cost)
-            if z == magnolia.name:
-                b.append(magnolia.cost)
-        flowers_dict = dict(zip(a, b))
-        sorting = sorted(flowers_dict.items(), key=lambda x: x[1])
-        return sorting
-
-    @staticmethod
-    def including_flowers():
-        if tulip.name in a:
-            print("Tulip is in buket")
-        else:
-            print("Tulip is not in buket")
-        if orchid.name in a:
-            print("Orchid is in buket")
-        else:
-            print("Orchid is not in buket")
-        if magnolia.name in a:
-            print("Magnolia is in buket")
-        else:
-            print("Magnolia is not in buket")
-
-
-tulip = Tulip
-orchid = Orchid
-magnolia = Magnolia
-
-my_buket = Buket
+    def including_flowers(self):
+        for flower in self.list_of_flowers:
+            print(f'{flower.name} is in the buket.')
