@@ -1,3 +1,6 @@
+import unittest
+
+
 # Домашнее задание
 # Привести к целому типу -1.6, 2.99
 
@@ -32,7 +35,53 @@ def mesta(s):
 
 
 def probel(x):
+    if x is False or x is True:
+        return "Incorrect number"
+    if type(x) is not str:
+        return "Incorrect number : type error"
     return x.lstrip().rstrip()
+
+
+class TestProbel(unittest.TestCase):
+    def test_without_spaces(self):
+        self.assertEqual(probel('hello'), 'hello', "Error in test_without_spaces")
+
+    def test_with_spaces(self):
+        self.assertEqual(probel(' hello '), 'hello', "Error in test_with_spaces")
+
+    def test_with_space_start(self):
+        self.assertEqual(probel(' hello'), 'hello', "Error in test_with_space_start")
+
+    def test_with_space_end(self):
+        self.assertEqual(probel('hello '), 'hello', "Error in test_with_space_end")
+
+    def test_with_space_middle(self):
+        self.assertEqual(probel('hel lo'), 'hel lo', "Error in test_with_space_end")
+
+    def test_with_two_spaces(self):
+        self.assertEqual(probel('  hello  '), 'hello', "Error in test_with_two_spaces")
+
+    def test_one_sign(self):
+        self.assertEqual(probel('m'), 'm', "Error in test_one_sign")
+
+    def test_string_with_symbols(self):
+        self.assertEqual(probel('test_with_space_end'), 'test_with_space_end', "Error in test_string_with_symbols")
+
+    def test_empty_string(self):
+        self.assertEqual(probel(''), '', "Error in test_empty_string")
+
+    def test_string_with_space(self):
+        self.assertEqual(probel(' '), '', "Error in test_string_with_space")
+
+    def test_false(self):
+        self.assertEqual(probel(False), "Incorrect number", "Error in test_false")
+
+    def test_true(self):
+        self.assertEqual(probel(True), "Incorrect number", "Error in test_false")
+
+    def test_number(self):
+        self.assertEqual(probel(5), "Incorrect number : type error", "Error in test_number")
+
 
 # Чек-лист
 # Строка без пробелов в начале и в конце

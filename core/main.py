@@ -146,9 +146,9 @@ print(variab())
 print(
     "hm4_while______________________________________________________________________________________________________"
 )
-print(proiz(4))
+print(proiz(1))
 
-print(flowers(2, 5))
+print(flowers(2, 2))
 
 print(num(45))
 
