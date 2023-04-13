@@ -6,14 +6,14 @@ import unittest
 def proiz(N):
     itogo = 1
     x = 0
-    if N == 0:
-        return "Incorrect number"
     if N < 0:
         return "Incorrect number : negative"
     if type(N) is not int:
         return "Incorrect number : type error"
     if N is False:
         return "Incorrect number"
+    if N == 0:
+        return 0
     while x < N:
         x += 1
         itogo *= x
@@ -29,22 +29,22 @@ class TestProiz(unittest.TestCase):
                          "Error in test_max")
 
     def test_0(self):
-        self.assertEqual(proiz(0), "Incorrect number", "Error in test_0")
+        self.assertEqual(proiz(0), 0)
 
     def test_negative(self):
-        self.assertEqual(proiz(-2), "Incorrect number : negative", "Error in test_negative")
+        self.assertEqual(proiz(-2), "Incorrect number : negative")
 
     def test_1(self):
-        self.assertEqual(proiz(1), 1, "Error in test_1")
+        self.assertEqual(proiz(1), 1)
 
     def test_float(self):
-        self.assertEqual(proiz(3.5), "Incorrect number : type error", "Error in test_float")
+        self.assertEqual(proiz(3.5), "Incorrect number : type error")
 
     def test_false(self):
-        self.assertEqual(proiz(False), "Incorrect number", "Error in test_false")
+        self.assertEqual(proiz(False), "Incorrect number : type error")
 
     def test_true(self):
-        self.assertEqual(proiz(True), "Incorrect number : type error", "Error in test_true")
+        self.assertEqual(proiz(True), "Incorrect number : type error")
 
 
 # Чек-лист
@@ -86,28 +86,28 @@ def flowers(S1, S2):
 
 class TestFlowers(unittest.TestCase):
     def test_poz(self):
-        self.assertEqual(flowers(2, 2), 6, "Error in test_poz")
+        self.assertEqual(flowers(2, 2), 6)
 
     def test_max(self):
-        self.assertEqual(flowers(200, 32), 11, "Error in test_max")
+        self.assertEqual(flowers(200, 32), 11)
 
     def test_neg(self):
-        self.assertEqual(flowers(-2, -5), "Incorrect number", "Error in test_neg")
+        self.assertEqual(flowers(-2, -5), "Incorrect number")
 
     def test_one_neg(self):
-        self.assertEqual(flowers(2, -2), "Incorrect number", "Error in test_one_neg")
+        self.assertEqual(flowers(2, -2), "Incorrect number")
 
     def test_float(self):
-        self.assertEqual(flowers(2.5, 2.1), "Incorrect number : type error", "Error in test_float")
+        self.assertEqual(flowers(2.5, 2.1), "Incorrect number : type error")
 
     def test_0(self):
-        self.assertEqual(flowers(0, 0), "Incorrect number", "Error in test_0")
+        self.assertEqual(flowers(0, 0), "Incorrect number")
 
     def test_one_0(self):
-        self.assertEqual(flowers(0, 5), "Incorrect number", "Error in test_one_0")
+        self.assertEqual(flowers(0, 5), "Incorrect number")
 
     def test_one_float(self):
-        self.assertEqual(flowers(2, 2.5), "Incorrect number : type error", "Error in test_one_float")
+        self.assertEqual(flowers(2, 2.5), "Incorrect number : type error")
 
 
 # Чек-лист
