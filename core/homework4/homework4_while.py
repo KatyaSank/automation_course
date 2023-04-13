@@ -1,13 +1,51 @@
-# 1. Дано число N. Найти произведение всех чисел от 0 до N.
+import unittest
 
+
+# 1. Дано число N. Найти произведение всех чисел от 0 до N.
 
 def proiz(N):
     itogo = 1
     x = 0
+    if N < 0:
+        return "Incorrect number : negative"
+    if type(N) is not int:
+        return "Incorrect number : type error"
+    if N is False:
+        return "Incorrect number"
+    if N == 0:
+        return 0
     while x < N:
         x += 1
         itogo *= x
     return itogo
+
+
+class TestProiz(unittest.TestCase):
+    def test_poz(self):
+        self.assertEqual(proiz(2), 2, "Error in test_poz")
+
+    def test_max(self):
+        self.assertEqual(proiz(50), 30414093201713378043612608166064768844377641568960512000000000000,
+                         "Error in test_max")
+
+    def test_0(self):
+        self.assertEqual(proiz(0), 0)
+
+    def test_negative(self):
+        self.assertEqual(proiz(-2), "Incorrect number : negative")
+
+    def test_1(self):
+        self.assertEqual(proiz(1), 1)
+
+    def test_float(self):
+        self.assertEqual(proiz(3.5), "Incorrect number : type error")
+
+    def test_false(self):
+        self.assertEqual(proiz(False), "Incorrect number : type error")
+
+    def test_true(self):
+        self.assertEqual(proiz(True), "Incorrect number : type error")
+
 
 # Чек-лист
 # N > 0
@@ -25,7 +63,6 @@ def proiz(N):
 # Инджекшн
 
 
-
 # 2. Поле засеяли цветами двух сортов на площади S1 и S2. Каждый год
 # площадь цветов первого сорта увеличивается вдвое, а площадь второго сорта
 # увеличивается втрое. Через сколько лет площадь первых сортов будет
@@ -34,11 +71,44 @@ def proiz(N):
 
 def flowers(S1, S2):
     x = 0
+    if S1 < 0 or S2 < 0:
+        return "Incorrect number"
+    if S1 == 0 or S2 == 0:
+        return "Incorrect number"
+    if type(S1) is not int or type(S2) is not int:
+        return "Incorrect number : type error"
     while S1 > 0.1 * S2:
         S1 *= 2
         S2 *= 3
         x += 1
     return x
+
+
+class TestFlowers(unittest.TestCase):
+    def test_poz(self):
+        self.assertEqual(flowers(2, 2), 6)
+
+    def test_max(self):
+        self.assertEqual(flowers(200, 32), 11)
+
+    def test_neg(self):
+        self.assertEqual(flowers(-2, -5), "Incorrect number")
+
+    def test_one_neg(self):
+        self.assertEqual(flowers(2, -2), "Incorrect number")
+
+    def test_float(self):
+        self.assertEqual(flowers(2.5, 2.1), "Incorrect number : type error")
+
+    def test_0(self):
+        self.assertEqual(flowers(0, 0), "Incorrect number")
+
+    def test_one_0(self):
+        self.assertEqual(flowers(0, 5), "Incorrect number")
+
+    def test_one_float(self):
+        self.assertEqual(flowers(2, 2.5), "Incorrect number : type error")
+
 
 # Чек-лист
 # S1, S2 положительные (целые)
@@ -58,8 +128,6 @@ def flowers(S1, S2):
 # Спецсимволы, буквы
 # Пробелы, NULL
 # Инджекшн
-
-
 
 
 # 3. Дано целое число N (>0). Используя операции деления нацело и взятия

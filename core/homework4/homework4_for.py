@@ -1,4 +1,5 @@
 from random import randint
+import unittest
 
 
 # 1. Даны два целых числа A и B (A < B). Найти сумму всех целых чисел от A до B
@@ -6,10 +7,46 @@ from random import randint
 
 
 def celye_chisla(A, B):
-    n = 0
-    for x in range(A, B + 1):
-        n += x
-    return n
+    try:
+        n = 0
+        for x in range(A, B + 1):
+            n += x
+        return n
+    except TypeError:
+        return "Incorrect type"
+
+
+class TestCelye(unittest.TestCase):
+    def test_poz(self):
+        self.assertEqual(celye_chisla(2, 5), 14, "Error in test_poz")
+
+    def test_max(self):
+        self.assertEqual(celye_chisla(2, 50000), 1250024999, "Error in test_max")
+
+    def test_neg(self):
+        self.assertEqual(celye_chisla(-5, -2), -14, "Error in test_neg")
+
+    def test_neg_and_pos(self):
+        self.assertEqual(celye_chisla(-2, 2), 0, "Error in test_neg_and_pos")
+
+    def test_float(self):
+        self.assertEqual(celye_chisla(0.2, 5.3), "Incorrect type", "Error in test_float")
+
+    def test_float_and_int(self):
+        self.assertEqual(celye_chisla(1.3, 5), "Incorrect type", "Error in test_float_and_int")
+
+    def test_int_and_float(self):
+        self.assertEqual(celye_chisla(3, 10.2), "Incorrect type", "Error in test_int_and_float")
+
+    def test(self):
+        self.assertEqual(celye_chisla(5, 2), 0, "Error in test")
+
+    def test_0(self):
+        self.assertEqual(celye_chisla(0, 0), 0, "Error in test_0")
+
+    def test_one_string(self):
+        self.assertEqual(celye_chisla(2, '4k'), "Incorrect type", "Error in test_one_string")
+
 
 # Чек-лист
 # А<В целые, позитивные числа с 1 знаком
